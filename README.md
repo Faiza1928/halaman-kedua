@@ -1,2 +1,4 @@
-# halaman-kedua
-halaman kedua html kelompok 4
+README.md
+index.html
+style.css (jika ada)
+script.js (jika ada)
