@@ -22,6 +22,17 @@ body {
     margin-bottom: 20px;
 }
 
+#ikon-kembali {
+    position: absolute; /* Letakkan ikon relatif terhadap container terdekat dengan posisi relatif */
+    left: 20px; /* Jarak dari kiri */
+    top: 20px; /* Jarak dari atas */
+    cursor: pointer; /* Ubah kursor saat diarahkan ke ikon */
+}
+
+#ikon-kembali:hover {
+    background-color: #d1bc9b;
+}
+
 /* Deskripsi halaman */
 .hero {
     display: flex;
@@ -107,9 +118,105 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.ikon-kucing {
+    position: fixed; /* Tetap di tempat saat scroll */
+    bottom: 20px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    width: 100px; /* Atur ukuran gambar */
+    cursor: pointer; /* Tampilkan pointer saat diarahkan ke gambar */
+    transition: all 0.3s ease;
+}
+
+.ikon-kucing:hover {
+    content: url('ikon kucing hover.png');
+}
+
 /* Bagian MBP */
 .recommendations-putih {
     text-align: center;
     padding: 20px;
     background-color: #ffffff;
+}
+
+
+
+
+/* Styling untuk layar dengan lebar maksimum 768px (tablet dan ponsel) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .button-container {
+        height: auto; /* Sesuaikan ketinggian di layar kecil */
+        margin-top: 20px;
+    }
+
+    .button-row {
+        flex-direction: column; /* Tombol disusun vertikal di layar kecil */
+    }
+
+    .button {
+        width: 100%; /* Tombol memenuhi lebar layar */
+        padding: 15px;
+        font-size: 16px;
+        margin: 10px 0; /* Spasi antar tombol vertikal */
+    }
+
+    .recommendation-grid {
+        flex-wrap: wrap; /* Foto disusun vertikal di layar kecil */
+        gap: 20px;
+    }
+
+    .recommendation img {
+        max-width: 100px; /* Ukuran gambar lebih kecil di layar kecil */
+        width: 100%;
+    }
+
+    #ikon-kembali {
+        top: 10px; /* Sesuaikan posisi ikon */
+        left: 10px;
+    }
+
+    .ikon-kucing {
+        width: 60px; /* Ukuran ikon lebih kecil */
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
+/* Styling untuk layar dengan lebar maksimum 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    .recommendation img {
+        max-width: 80px; /* Ukuran gambar lebih kecil lagi */
+    }
+
+    .button {
+        font-size: 14px; /* Font tombol lebih kecil */
+        padding: 10px;
+    }
 }
